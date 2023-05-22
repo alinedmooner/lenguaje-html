@@ -1,0 +1,71 @@
+---
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Lenguaje HTML</title>
+	</head>
+	<body>
+		<h1>Lenguaje HTML</h1>
+		<div class="content-container">
+			<a href="/history/">Historia</a>
+			<a href="/elements/">Elementos</a>
+			<a href="/attributes/">Atributos</a>
+		</div>
+	</body>
+	<style>
+ 		@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+		:root {
+			--background: #001f3f;
+			--text: #f8f9fa;
+			--heading: #ffd700;
+			--hover: #ff4500;
+			--foreground: #800080;
+		}
+
+		body {
+			background: var(--background);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		h1 {
+			color: var(--heading);
+			font-family: 'Merriweather', serif;
+			font-weight: 700;
+			font-style: bold;
+		}
+
+		a {
+			background: var(--foreground);
+			color: var(--text);
+			height: 1.3rem;
+			width: 13rem;
+			border-radius: 55px;
+			padding: 1rem;
+			margin: 1rem;
+			text-decoration: none;
+			text-align: center;
+			font-family: 'Merriweather', serif;
+			font-weight: 400;
+			font-style: normal;
+			line-height: 1.3rem;
+		}
+
+		a:hover {
+			border: solid 2px var(--hover);
+		}
+
+		.content-container {
+			display: flex;
+			flex-direction: column;
+		}
+	</style>
+</html>
