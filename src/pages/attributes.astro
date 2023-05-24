@@ -16,22 +16,16 @@
 	</body>
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
-	  :root {
-		 --background: #001f3f;
-		 --text: #f8f9fa;
-		 --heading: #ffd700;
-		 --hover: #ff4500;
-		 --foreground: #800080;
-		 --foreground-2: #800020;
-	 	}
-
-		body {
-			background: var(--background);
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
+		:root {
+			--background: #001f3f;
+			--text: #f8f9fa;
+			--heading: #ffd700;
+			--hover: #FF731D;
+			--foreground: #800080;
+			--foreground-2: #3B185F;
+			--foreground-3: #03001C;
 		}
 
 		h1 {
@@ -39,6 +33,7 @@
 			font-family: 'Merriweather', serif;
 			font-weight: 700;
 			font-style: bold;
+			text-align: center;
 		}
 
 		p {
@@ -65,14 +60,45 @@
 			margin: 1rem;
 			text-decoration: none;
 			text-align: center;
-			font-family: 'Merriweather', serif;
 			font-weight: 400;
 			font-style: normal;
 			line-height: 1.3rem;
+			font-family: 'Roboto Slab', serif;
 		}
 
 		a:hover {
 			border: solid 3px var(--hover);
+		}
+
+		html {
+			--s: 30px; /* control the size */
+			--c1: var(--background);
+			--c2: var(--foreground-3);
+			
+			--_s:37.5% 12.5% at 62.5%;
+			--_g:34% 99%,#0000 101%;
+			--g1:radial-gradient(var(--_s) 100%,#0000 32%,var(--c1) var(--_g));
+			--g2:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c1) var(--_g));
+			--g3:radial-gradient(var(--_s) 100%,#0000 32%,var(--c2) var(--_g));
+			--g4:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c2) var(--_g));
+			background:
+				var(--g1),
+				var(--g2) 0                calc(3*var(--s)),
+				var(--g3) var(--s)         calc(3*var(--s)),
+				var(--g4) var(--s)         calc(6*var(--s)),
+				var(--g1) calc(2*var(--s)) calc(6*var(--s)),
+				var(--g2) calc(2*var(--s)) calc(9*var(--s)),
+				var(--g3) calc(3*var(--s)) calc(9*var(--s)),
+				var(--g4) calc(3*var(--s)) 0,
+				repeating-linear-gradient(var(--c1) 0 25%,var(--c2) 0 50%);
+			background-size: calc(4*var(--s)) calc(12*var(--s));
+		}
+
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
 		}
  	</style>
 </html>

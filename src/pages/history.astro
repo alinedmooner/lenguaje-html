@@ -15,7 +15,8 @@
 		<p>Paralelamente a XHTML, el W3C también trabajó en XHTML2, un nuevo lenguaje incompatible con HTML y XHTML. Mientras tanto, se publicaron las especificaciones HTML de DOM Nivel 1, DOM Nivel 2 Core y DOM Nivel 2, pero el desarrollo se estancó. En 2003, el interés en la evolución del propio HTML resurgió con la publicación de XForms, lo que llevó a la idea de ampliar los formularios de HTML4 para incorporar funciones similares.
 		</p>
 		<p>Un taller en 2004 probó la idea de reabrir la evolución de HTML, pero la propuesta fue rechazada inicialmente a favor de reemplazos basados en XML. Sin embargo, Apple, Mozilla y Opera unieron fuerzas bajo <a title="The Web Hypertext Application Technology Working Group" href="#w3c">WHATWG</a> para continuar desarrollando HTML5, enfocándose en la compatibilidad con versiones anteriores, haciendo coincidir las especificaciones e implementaciones, y brindando especificaciones detalladas para una interoperabilidad completa.</p>
-		<p>En 2007, el W3C formó un grupo de trabajo para colaborar con el WHATWG sobre HTML5. Con el tiempo, los grupos divergieron en sus objetivos, con el W3C apuntando a una versión terminada de HTML5 y el WHATWG optando por un estándar de vida actualizado continuamente para abordar problemas conocidos e introducir nuevas funciones. En 2019, WHATWG y W3C llegaron a un acuerdo para colaborar en el desarrollo de una versión unificada de HTML en el futuro.</p>
+		<p>En 2007, el W3C formó un grupo de trabajo para colaborar con el WHATWG sobre HTML5. Con el tiempo, los grupos divergieron en sus objetivos, con el W3C apuntando a una versión terminada de HTML5 y el WHATWG optando por un estándar de vida actualizado continuamente para abordar problemas conocidos e introducir nuevas funciones.</p>
+		<p>En 2019, WHATWG y W3C llegaron a un acuerdo para colaborar en el desarrollo de una versión unificada de HTML en el futuro.</p>
 		<h2 id="w3c">World Wide Web Consortium</h2>
 		<p>El Consorcio World Wide Web (W3C) es una comunidad internacional en la que las organizaciones miembro, un personal a tiempo completo y el público trabajan juntos para desarrollar estándares web. Dirigido por el inventor y director de la Web, Tim Berners-Lee, el director general interino Ralph Swick y una junta directiva, la misión del W3C es llevar la Web a su máximo potencial.</p>
 		<h2 id="whatwg">Web Hypertext Application Technology Working Group</h2>
@@ -24,24 +25,26 @@
 	</body>
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
 
-	  :root {
-		 --background: #001f3f;
-		 --text: #f8f9fa;
-		 --heading: #ffd700;
-		 --hover: #ff4500;
-		 --foreground: #800080;
-	 }
-
-		body {
-			background: var(--background);
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
+		:root {
+			--background: #001f3f;
+			--text: #f8f9fa;
+			--heading: #ffd700;
+			--hover: #ff4500;
+			--foreground: #800080;
+			--foreground-2: #800020;
+			--foreground-3: #03001C;
 		}
 
-		h1, h2 {
+		h1 {
+			color: var(--heading);
+			font-family: 'Merriweather', serif;
+			font-weight: 700;
+			text-align: center;
+		}
+
+		h2 {
 			color: var(--heading);
 			font-family: 'Merriweather', serif;
 			font-weight: 700;
@@ -50,7 +53,6 @@
 		p {
 			color: var(--text);
 			font-family: 'Merriweather', serif;
-			font-weight: 400;
 			font-style: normal;
 			width: 42rem;
 		}
@@ -70,5 +72,32 @@
 			font-style: bold;
 		}
 		
+		html {
+			--s: 30px; /* control the size */
+			--c1: var(--background);
+			--c2: var(--foreground-3);
+			
+			--_s:37.5% 12.5% at 62.5%;
+			--_g:34% 99%,#0000 101%;
+			--g1:radial-gradient(var(--_s) 100%,#0000 32%,var(--c1) var(--_g));
+			--g2:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c1) var(--_g));
+			--g3:radial-gradient(var(--_s) 100%,#0000 32%,var(--c2) var(--_g));
+			--g4:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c2) var(--_g));
+			background:
+				var(--g1),
+				var(--g2) 0                calc(3*var(--s)),
+				var(--g3) var(--s)         calc(3*var(--s)),
+				var(--g4) var(--s)         calc(6*var(--s)),
+				var(--g1) calc(2*var(--s)) calc(6*var(--s)),
+				var(--g2) calc(2*var(--s)) calc(9*var(--s)),
+				var(--g3) calc(3*var(--s)) calc(9*var(--s)),
+				var(--g4) calc(3*var(--s)) 0,
+				repeating-linear-gradient(var(--c1) 0 25%,var(--c2) 0 50%);
+			background-size: calc(4*var(--s)) calc(12*var(--s));
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
  </style>
 </html>
