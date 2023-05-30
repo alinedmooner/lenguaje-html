@@ -16,8 +16,6 @@
 		<a href="/complete-list/">Lista completa</a>
 	</body>
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
-		@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 		:root {
@@ -25,8 +23,8 @@
 			--text: #f8f9fa;
 			--heading: #ffd700;
 			--hover: #FF731D;
-			--foreground: #800080;
-			--foreground-2: #3B185F;
+			--foreground: #3B185F;
+			--foreground-2: #800020;
 			--foreground-3: #03001C;
 		}
 
@@ -35,21 +33,6 @@
 			font-family: 'Roboto', sans-serif;
 			font-weight: 900;
 			text-align: center;
-		}
-
-		p {
-			color: var(--text);
-			font-family: 'Roboto', sans-serif;
-			font-weight: 400;
-			font-style: normal;
-			width: 42rem;
-		}
-
-		span {
-			color: var(--hover);
-			font-family: 'Roboto', sans-serif;
-			font-weight: 700;
-			font-style: bold;
 		}
 
 		a {
@@ -70,6 +53,13 @@
 
 		a:hover {
 			border: solid 3px var(--hover);
+		}
+
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
 		}
 
 		html {
@@ -94,9 +84,6 @@
 				var(--g4) calc(3*var(--s)) 0,
 				repeating-linear-gradient(var(--c1) 0 25%,var(--c2) 0 50%);
 			background-size: calc(4*var(--s)) calc(12*var(--s));
-		}
-
-		body {
 			display: flex;
 			justify-content: center;
 			align-items: center;
