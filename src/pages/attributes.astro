@@ -15,45 +15,50 @@
 		<a href="">Específicos</a>
 	</body>
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
-		@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+		@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+		@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap");
+		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 		:root {
 			--background: #001f3f;
 			--text: #f8f9fa;
 			--heading: #ffd700;
-			--hover: #FF731D;
+			--hover: #ff731d;
 			--foreground: #800080;
-			--foreground-2: #3B185F;
-			--foreground-3: #03001C;
+			--foreground-2: #800020;
+			--foreground-3: #03001c;
 		}
 
 		h1 {
 			color: var(--heading);
-			font-family: 'Merriweather', serif;
-			font-weight: 700;
-			font-style: bold;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 900;
 			text-align: center;
+		}
+
+		h2 {
+			color: var(--heading);
+			font-family: 'Roboto', sans-serif;
+			font-weight: 700;
+			text-align: left;
 		}
 
 		p {
 			color: var(--text);
-			font-family: 'Merriweather', serif;
-			font-weight: 400;
-			font-style: normal;
-			width: 42rem;
+			font-family: 'Roboto', sans-serif;
 		}
 
 		span {
 			color: var(--hover);
-			font-family: 'Merriweather', serif;
+			font-family: 'Roboto', sans-serif;
 			font-weight: 700;
 		}
+
 
 		a {
 			background: var(--foreground-2);
 			color: var(--text);
-			height: 1.3rem;
+			height: min-content;
 			width: 13rem;
 			border-radius: 55px;
 			padding: 1rem;
@@ -63,35 +68,56 @@
 			font-weight: 400;
 			font-style: normal;
 			line-height: 1.3rem;
-			font-family: 'Roboto Slab', serif;
+			font-family: 'Roboto', sans-serif;
 		}
 
 		a:hover {
-			border: solid 3px var(--hover);
+			box-shadow: 0 0 0 3px var(--hover);
+			transform: scale(1.1);
+		}
+
+		.elements-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1rem;
+		}
+
+		.special-elements-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1rem;
 		}
 
 		html {
 			--s: 30px; /* control the size */
 			--c1: var(--background);
 			--c2: var(--foreground-3);
-			
-			--_s:37.5% 12.5% at 62.5%;
-			--_g:34% 99%,#0000 101%;
-			--g1:radial-gradient(var(--_s) 100%,#0000 32%,var(--c1) var(--_g));
-			--g2:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c1) var(--_g));
-			--g3:radial-gradient(var(--_s) 100%,#0000 32%,var(--c2) var(--_g));
-			--g4:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c2) var(--_g));
-			background:
-				var(--g1),
-				var(--g2) 0                calc(3*var(--s)),
-				var(--g3) var(--s)         calc(3*var(--s)),
-				var(--g4) var(--s)         calc(6*var(--s)),
-				var(--g1) calc(2*var(--s)) calc(6*var(--s)),
-				var(--g2) calc(2*var(--s)) calc(9*var(--s)),
-				var(--g3) calc(3*var(--s)) calc(9*var(--s)),
-				var(--g4) calc(3*var(--s)) 0,
-				repeating-linear-gradient(var(--c1) 0 25%,var(--c2) 0 50%);
-			background-size: calc(4*var(--s)) calc(12*var(--s));
+
+			--_s: 37.5% 12.5% at 62.5%;
+			--_g: 34% 99%, #0000 101%;
+			--g1: radial-gradient(var(--_s) 100%, #0000 32%, var(--c1) var(--_g));
+			--g2: radial-gradient(var(--_s) 0, #0000 32%, var(--c1) var(--_g));
+			--g3: radial-gradient(var(--_s) 100%, #0000 32%, var(--c2) var(--_g));
+			--g4: radial-gradient(var(--_s) 0, #0000 32%, var(--c2) var(--_g));
+			background: var(--g1), var(--g2) 0 calc(3 * var(--s)),
+				var(--g3) var(--s) calc(3 * var(--s)),
+				var(--g4) var(--s) calc(6 * var(--s)),
+				var(--g1) calc(2 * var(--s)) calc(6 * var(--s)),
+				var(--g2) calc(2 * var(--s)) calc(9 * var(--s)),
+				var(--g3) calc(3 * var(--s)) calc(9 * var(--s)),
+				var(--g4) calc(3 * var(--s)) 0,
+				repeating-linear-gradient(var(--c1) 0 25%, var(--c2) 0 50%);
+			background-size: calc(4 * var(--s)) calc(12 * var(--s));
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		abbr {
+			color: var(--hover);
+			font-family: 'Roboto', sans-serif;
+			font-weight: 700;
 		}
 
 		body {
@@ -100,5 +126,5 @@
 			align-items: center;
 			flex-direction: column;
 		}
- 	</style>
+	</style>
 </html>

@@ -376,6 +376,7 @@
 	<style>
 		@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
 		@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap");
+		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 		:root {
 			--background: #001f3f;
@@ -389,31 +390,27 @@
 
 		h1 {
 			color: var(--heading);
-			font-family: "Merriweather", serif;
-			font-weight: 700;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 900;
 			text-align: center;
 		}
 
 		h2 {
 			color: var(--heading);
-			font-family: "Merriweather", serif;
+			font-family: 'Roboto', sans-serif;
 			font-weight: 700;
 			text-align: left;
 		}
 
 		p {
 			color: var(--text);
-			font-family: "Merriweather", serif;
-			font-weight: 400;
-			font-style: normal;
-			width: 42rem;
+			font-family: 'Roboto', sans-serif;
 		}
 
 		span {
 			color: var(--hover);
-			font-family: "Merriweather", serif;
+			font-family: 'Roboto', sans-serif;
 			font-weight: 700;
-			font-style: bold;
 		}
 
 		a {
@@ -437,15 +434,16 @@
 
 		.elements-container {
 			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-columns: 1fr 1fr;
 			gap: 1rem;
+			justify-items: center;
 		}
 
 		.special-elements-container {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 2rem;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1rem;
+			justify-items: center;
 		}
 
 		html {
@@ -476,9 +474,8 @@
 
 		abbr {
 			color: var(--hover);
-			font-family: 'Merriweather', serif;
+			font-family: 'Roboto', sans-serif;
 			font-weight: 700;
-			font-style: bold;
 		}
 	</style>
 </html>
