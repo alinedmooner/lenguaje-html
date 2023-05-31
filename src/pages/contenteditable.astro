@@ -1,0 +1,80 @@
+---
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Atributo contenteditable</title>
+  </head>
+  <body>
+    <h1>contenteditable</h1>
+    <p>Es un atributo enumerado en HTML que indica si un elemento debe ser editable por el usuario. Cuando se establece en "true" o se deja vacío, el elemento se vuelve editable y el navegador proporcionará una interfaz para permitir la edición del contenido. Si se establece en "false", el elemento no será editable.</p>
+    <p>Si se omite el valor del atributo o si el valor no es válido, se heredará del elemento principal. Esto significa que si el elemento principal es editable, el elemento secundario también lo será, a menos que se especifique lo contrario.</p>
+    <p>Para establecer el color del cursor de inserción de texto en un elemento editable, puedes utilizar la propiedad CSS "caret-color".</p>
+    <p>En cuanto a la navegación y el enfoque, los elementos con el atributo contenteditable se pueden enfocar y participan en la navegación secuencial del teclado. Sin embargo, de forma predeterminada, los elementos con contenteditable anidados dentro de otros elementos contenteditable no se incluirán en la secuencia de tabulación.</p>
+    <p>Para agregar elementos editables anidados a la secuencia de tabulación, se debe especificar el atributo tabindex con un valor de "0" en esos elementos. Esto les permitirá formar parte de la navegación del teclado en el orden adecuado.</p>
+  </body>
+</html>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+	:root {
+		--background: #001f3f;
+		--text: #f8f9fa;
+		--heading: #ffd700;
+		--hover: #FF731D;
+		--foreground: #3B185F;
+		--foreground-2: #800020;
+		--foreground-3: #03001C;
+	}
+
+	h1 {
+		color: var(--heading);
+		font-family: 'Roboto', sans-serif;
+		font-weight: 900;
+		text-align: center;
+	}
+
+	p {
+		color: var(--text);
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.elements-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	html {
+		--s: 30px; /* control the size */
+		--c1: var(--background);
+		--c2: var(--foreground-3);
+		
+		--_s:37.5% 12.5% at 62.5%;
+		--_g:34% 99%,#0000 101%;
+		--g1:radial-gradient(var(--_s) 100%,#0000 32%,var(--c1) var(--_g));
+		--g2:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c1) var(--_g));
+		--g3:radial-gradient(var(--_s) 100%,#0000 32%,var(--c2) var(--_g));
+		--g4:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c2) var(--_g));
+		background:
+			var(--g1),
+			var(--g2) 0                calc(3*var(--s)),
+			var(--g3) var(--s)         calc(3*var(--s)),
+			var(--g4) var(--s)         calc(6*var(--s)),
+			var(--g1) calc(2*var(--s)) calc(6*var(--s)),
+			var(--g2) calc(2*var(--s)) calc(9*var(--s)),
+			var(--g3) calc(3*var(--s)) calc(9*var(--s)),
+			var(--g4) calc(3*var(--s)) 0,
+			repeating-linear-gradient(var(--c1) 0 25%,var(--c2) 0 50%);
+		background-size: calc(4*var(--s)) calc(12*var(--s));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+</style>
