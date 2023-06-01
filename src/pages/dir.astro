@@ -1,0 +1,86 @@
+---
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Atributo dir</title>
+  </head>
+  <body>
+    <h1>dir</h1>
+    <p>El atributo global dir en HTML es un atributo enumerado que se utiliza para indicar la direccionalidad del texto dentro de un elemento. Su propósito principal es proporcionar información sobre si el contenido del elemento debe ser representado y presentado de izquierda a derecha (LTR - left-to-right) o de derecha a izquierda (RTL - right-to-left).</p>
+    <ul>
+      <li><p><b>ltr</b> indica que el texto dentro del elemento se muestra y se lee de izquierda a derecha (por ejemplo, en idiomas como inglés, francés, español).</p></li>
+      <li><p><b>rtl</b> indica que el texto dentro del elemento se muestra y se lee de derecha a izquierda (por ejemplo, en idiomas como árabe, hebreo, persa).</p></li>
+      <li><p><b>auto</b> permite que el navegador determine la dirección del texto basándose en el contenido del elemento y el idioma del documento. Por lo general, se recomienda utilizar auto para permitir que el navegador tome la decisión correcta de la dirección del texto.</p></li>
+    </ul>
+    <p>En el elemento bdo, el atributo dir es obligatorio y se utiliza para especificar la dirección de escritura bidireccional en un bloque de texto. Puedes establecer su valor como ltr (izquierda a derecha) o rtl (derecha a izquierda) para controlar la dirección del texto en un bloque de manera explícita, independientemente de la configuración de dirección del documento.</p>
+    <p>El elemento bdi a diferencia de bdo, el atributo dir no se hereda en el elemento bdi. El valor de dirección se determina automáticamente según el contexto y el idioma del texto dentro de bdi. Esto permite que bdi se utilice para representar contenido aislado que requiere una dirección específica.</p>
+    <p>Anulación por propiedades CSS y Unicode-bidi: Es importante tener en cuenta que las propiedades CSS como <code>direction</code> y <code>unicode-bidi</code>, si se aplican mediante una hoja de estilos, pueden anular el valor del atributo dir. Esto significa que si hay reglas de estilo que definen la dirección del texto en el elemento, estas reglas tendrán prioridad sobre el valor del atributo dir. Sin embargo, se recomienda utilizar el atributo dir en lugar de propiedades CSS relacionadas para garantizar una correcta representación incluso en navegadores sin soporte de CSS o con CSS desactivado.</p>
+    <p>En resumen, el atributo dir es importante para controlar la dirección de escritura bidireccional en HTML. Su uso adecuado garantiza una representación precisa del texto, especialmente en contenido multilingüe o con direcciones de escritura específicas. Se recomienda utilizar el atributo dir en lugar de propiedades CSS relacionadas siempre que sea posible, ya que esto asegura una correcta representación incluso en ausencia de soporte CSS o cuando el CSS está desactivado. El valor auto se utiliza para datos con una dirección desconocida.</p>
+  </body>
+</html>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+	:root {
+		--background: #001f3f;
+		--text: #f8f9fa;
+		--heading: #ffd700;
+		--hover: #FF731D;
+		--foreground: #3B185F;
+		--foreground-2: #800020;
+		--foreground-3: #03001C;
+	}
+
+	h1 {
+		color: var(--heading);
+		font-family: 'Roboto', sans-serif;
+		font-weight: 900;
+		text-align: center;
+	}
+
+	p {
+		color: var(--text);
+		font-family: 'Roboto', sans-serif;
+	}
+
+  li {
+    color: var(--text);
+  }
+
+  b { 
+    color: var(--hover);
+  }
+
+	html {
+		--s: 30px; /* control the size */
+		--c1: var(--background);
+		--c2: var(--foreground-3);
+		
+		--_s:37.5% 12.5% at 62.5%;
+		--_g:34% 99%,#0000 101%;
+		--g1:radial-gradient(var(--_s) 100%,#0000 32%,var(--c1) var(--_g));
+		--g2:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c1) var(--_g));
+		--g3:radial-gradient(var(--_s) 100%,#0000 32%,var(--c2) var(--_g));
+		--g4:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c2) var(--_g));
+		background:
+			var(--g1),
+			var(--g2) 0                calc(3*var(--s)),
+			var(--g3) var(--s)         calc(3*var(--s)),
+			var(--g4) var(--s)         calc(6*var(--s)),
+			var(--g1) calc(2*var(--s)) calc(6*var(--s)),
+			var(--g2) calc(2*var(--s)) calc(9*var(--s)),
+			var(--g3) calc(3*var(--s)) calc(9*var(--s)),
+			var(--g4) calc(3*var(--s)) 0,
+			repeating-linear-gradient(var(--c1) 0 25%,var(--c2) 0 50%);
+		background-size: calc(4*var(--s)) calc(12*var(--s));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+</style>
