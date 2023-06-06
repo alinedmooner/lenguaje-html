@@ -1,4 +1,5 @@
 ---
+import Navigation from "../components/Navigation.astro";
 ---
 
 <html lang="es">
@@ -16,6 +17,7 @@
 			<a href="/elements/">Elementos</a>
 			<a href="/attributes/">Atributos</a>
 		</div>
+		<Navigation />
 	</body>
 </html>
 <style>
@@ -61,6 +63,8 @@
 	.content-container {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
 	html {
@@ -85,9 +89,13 @@
 			var(--g4) calc(3*var(--s)) 0,
 			repeating-linear-gradient(var(--c1) 0 25%,var(--c2) 0 50%);
 		background-size: calc(4*var(--s)) calc(12*var(--s));
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
 	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		width: 100vw;
+	}
+
+	
 </style>
