@@ -1,0 +1,85 @@
+---
+import Main from "../layouts/Main.astro";
+---
+
+<Main title="Lenguaje HTML">
+	<h1>Lenguaje HTML</h1>
+</Main>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+	:root {
+		--background: #000000;
+		--text: #f8f9fa;
+		--heading: #ffd700;
+		--hover: #FF731D;
+		--foreground: #3B185F;
+		--foreground-2: #800020;
+		--foreground-3: #1A1A1B;
+	}
+
+	h1 {
+		color: var(--heading);
+		font-family: 'Roboto', sans-serif;
+		font-weight: 900;
+		text-align: center;
+	}
+
+	a {
+		background: var(--foreground);
+		color: var(--text);
+		height: 1.3rem;
+		width: 13rem;
+		border-radius: 55px;
+		padding: 1rem;
+		margin: 1rem;
+		text-decoration: none;
+		text-align: center;
+		font-weight: 400;
+		font-style: normal;
+		line-height: 1.3rem;
+		font-family: 'Roboto', serif;
+	}
+
+	a:hover {
+		border: solid 3px var(--hover);
+	}
+
+	.content-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	html {
+		--s: 30px; /* control the size */
+		--c1: var(--background);
+		--c2: var(--foreground-3);
+		
+		--_s:37.5% 12.5% at 62.5%;
+		--_g:34% 99%,#0000 101%;
+		--g1:radial-gradient(var(--_s) 100%,#0000 32%,var(--c1) var(--_g));
+		--g2:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c1) var(--_g));
+		--g3:radial-gradient(var(--_s) 100%,#0000 32%,var(--c2) var(--_g));
+		--g4:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c2) var(--_g));
+		background:
+			var(--g1),
+			var(--g2) 0                calc(3*var(--s)),
+			var(--g3) var(--s)         calc(3*var(--s)),
+			var(--g4) var(--s)         calc(6*var(--s)),
+			var(--g1) calc(2*var(--s)) calc(6*var(--s)),
+			var(--g2) calc(2*var(--s)) calc(9*var(--s)),
+			var(--g3) calc(3*var(--s)) calc(9*var(--s)),
+			var(--g4) calc(3*var(--s)) 0,
+			repeating-linear-gradient(var(--c1) 0 25%,var(--c2) 0 50%);
+		background-size: calc(4*var(--s)) calc(12*var(--s));
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		width: 100vw;
+	}
+</style>

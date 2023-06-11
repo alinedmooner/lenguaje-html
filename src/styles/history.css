@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Futur Block";
+  src:
+    url(/Futur-Block.woff) format("woff"),
+    url(/Futur-Block.woff2) format("woff2");
+}
+
+* {
+  font-family: "Futur Block", sans-serif;
+}
+
+p {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
