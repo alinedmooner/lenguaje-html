@@ -9,11 +9,13 @@
 @font-face {
   font-family: "Yet Untitled";
   src:
-    url(/Yet-Untitled.woff) format("woff"),
-    url(/Yet-Untitled.woff2) format("woff2");
+    url("/Yet-Untitled.woff") format("woff"),
+    url("/Yet-Untitled.woff2") format("woff2");
 }
 
 body {
+  margin: 0;
+  padding: 0;
   color: var(--white);
   background: var(--dark-orange);
 }

@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Futur Block";
   src:
-    url(/Futur-Block.woff) format("woff"),
-    url(/Futur-Block.woff2) format("woff2");
+    url("/Futur-Block.woff") format("woff"),
+    url("/Futur-Block.woff2") format("woff2");
 }
 
 * {
@@ -10,6 +10,15 @@
 }
 
 p {
-  font-size: 0.8rem;
+  padding: 0.5em;
+  font-size: 0.8em;
   letter-spacing: 0.05em;
+}
+
+h2 {
+  padding: 0.5em;
+}
+
+h3 {
+  padding: 0.5em;
 }
