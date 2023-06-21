@@ -1,5 +1,0 @@
-{
-  "parser": {
-    ".astro$": "@markuplint/astro-parser"
-  }
-}
