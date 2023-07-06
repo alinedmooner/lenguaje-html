@@ -6,3 +6,6 @@ They are also responsible for delivering metadata to search engines since the bi
 
 Through the implementation of css, graphic design can offer almost any possibility in terms of presentation and user experience in the navigation of graphic interfaces.
 
+HTML has gone through many stages and a constant evolution due to constant changes in the ecosystem of web technologies, today it has reached the status of an active standard, that is, HTML has been standardized for the most common browsers and the changes that are made in the language are global to all supported browsers.
+
+HTML is a descriptive language that is responsible for creating interfaces in web browsers, it is based on individual html elements that have global or specific attributes or both, and that their correct use generates greater efficiency and extended support on the web.
