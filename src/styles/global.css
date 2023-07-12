@@ -13,6 +13,13 @@
     url("/Yet-Untitled.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Futur Block";
+  src:
+    url("/Futur-Block.woff") format("woff"),
+    url("/Futur-Block.woff2") format("woff2");
+}
+
 body {
   height: 100vh;
   margin: 0;
@@ -30,4 +37,52 @@ h1 {
   text-align: center;
   text-shadow: var(--black) 0 0 0.1em;
   letter-spacing: 0.05em;
+  margin: 0;
+  padding: 1rem;
+}
+
+
+
+* {
+  font-family: "Futur Block", sans-serif;
+}
+
+p {
+  padding: 1em;
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  padding: 0.5em;
+}
+
+h3 {
+  padding: 0.5em;
+}
+
+nav {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 100%;
+  height: 2em;
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--orange);
+}
+
+a {
+  display: block;
+
+  padding: 0.2em 0.5em;
+
+  color: var(--white);
+  text-decoration: none;
+  text-shadow: var(--black) 0 0 0.3em;
 }
