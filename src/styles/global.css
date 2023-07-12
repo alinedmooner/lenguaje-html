@@ -20,6 +20,11 @@
     url("/Futur-Block.woff2") format("woff2");
 }
 
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   height: 100vh;
   margin: 0;
@@ -41,20 +46,17 @@ h1 {
   padding: 1rem;
 }
 
-
-
-* {
-  font-family: "Futur Block", sans-serif;
-}
-
 p {
   padding: 1em;
-  font-size: 0.8em;
+  font-size: 0.9em;
   letter-spacing: 0.05em;
+  font-family: "Futur Block", sans-serif;
 }
 
 h2 {
   padding: 0.5em;
+  font-family: "Futur Block", sans-serif;
+
 }
 
 h3 {
@@ -62,7 +64,7 @@ h3 {
 }
 
 nav {
-  position: absolute;
+  position: sticky;
   bottom: 0;
 
   display: flex;
@@ -73,16 +75,19 @@ nav {
   height: 2em;
   margin: 0;
   padding: 0;
-
   background-color: var(--orange);
+
 }
 
 a {
   display: block;
-
-  padding: 0.2em 0.5em;
-
   color: var(--white);
   text-decoration: none;
-  text-shadow: var(--black) 0 0 0.3em;
+  text-shadow: var(--white) 0 0 0.05em;
+  font-size: 1.5rem;
+
+}
+
+section {
+  padding: 1rem;
 }
