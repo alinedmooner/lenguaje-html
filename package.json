@@ -12,11 +12,5 @@
   },
   "dependencies": {
     "astro": "^2.5.6"
-  },
-  "devDependencies": {
-    "eslint": "^8.42.0",
-    "eslint-config-manzdev": "^0.0.2",
-    "stylelint": "^15.7.0",
-    "stylelint-config-manzdev": "^0.0.3"
   }
 }
