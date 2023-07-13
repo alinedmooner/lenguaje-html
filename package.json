@@ -11,6 +11,8 @@
     "home": "astro dev --port 5173 --host"
   },
   "dependencies": {
-    "astro": "^2.5.6"
+    "astro": "^2.5.6",
+    "stylelint": "^15.10.1",
+    "stylelint-config-manzdev": "^0.0.10"
   }
 }
