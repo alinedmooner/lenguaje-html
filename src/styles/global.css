@@ -32,7 +32,7 @@ body {
 
   color: var(--white);
 
-  background: var(--dark-orange);
+  background: var(--orange);
 }
 
 h1 {
@@ -40,7 +40,7 @@ h1 {
   padding: 1rem;
 
   font-family: "Yet Untitled", sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 300;
   text-align: center;
   text-shadow: var(--black) 0 0 0.1em;
@@ -50,7 +50,7 @@ h1 {
 p {
   padding: 1em;
   font-family: "Futur Block", sans-serif;
-  font-size: 0.9em;
+  font-size: 1.4em;
   letter-spacing: 0.05em;
 }
 
@@ -76,15 +76,18 @@ nav {
   margin: 0;
   padding: 0;
 
-  background-color: var(--orange);
+  background-color: var(--white);
+  opacity: 89%;
 }
 
 a {
   display: block;
+
   font-size: 1.5rem;
   color: var(--white);
   text-decoration: none;
-  text-shadow: var(--white) 0 0 0.05em;
+  text-shadow: var(--orange) 0 0 0.05em;
+  color: var(--orange);
 }
 
 section {
